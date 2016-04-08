@@ -1,0 +1,68 @@
+<head>
+  <title>Joe's Portfolio Page v2</title>
+</head>
+<body ng-app="PortfolioApp">
+  
+  <div class="navbar navbar-default">
+    <div class="container">
+      <a class="navbar-brand" href="#">Joe McIlhargey</a>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="supporting">
+    <div class="container">
+      <div class="row">
+         <div class="col-sm-8">
+           <h2>Sample guide on Javascript topic </h2>
+           <p>Here is where the content goes for a simple and helpful article or guide to Javascript programming. We're writing so many great things in here it's awesome. Really helpful step-by-step stuff here.</p>
+           <em>March, 30</em>
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-8 last">
+           <h2>Sample guide on Javascript topic </h2>
+           <p>Here is where the content goes for a simple and helpful article or guide to Javascript programming. We're writing so many great things in here it's awesome. Really helpful step-by-step stuff here.</p>
+           <em>April, 4</em>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="main" id="portfolio" ng-controller="ProjectController">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4" ng-repeat="project in projects">
+          <a href="{{ project.link }}" target="_blank">
+            <div class="thumb" ng-class="{ 'thumb-last': $last }">
+              <img ng-src="{{ project.pic }}">
+              <div class="caption">
+                 <h3>{{ project.title }}</h3>
+                 <p>{{ project.desc }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <ul>
+            <li><a href="https://github.com/jmcilhargey" target="_blank"><i class="fa fa-github"></i>&nbspGithub</a></li>
+            <li><a href="http://www.freecodecamp.com/jmcilhargey" target="_blank"><i class="fa fa-fire"></i>&nbspfreeCodeCamp</a></li>
+            <li><a href="https://www.linkedin.com/in/joemcilhargey" target="_blank"><i class="fa fa-linkedin"></i>&nbspLinkedIn</a></li>
+          </ul>
+          <p>2016 - Project ideas from freecodecamp, codecademy, udacity</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
